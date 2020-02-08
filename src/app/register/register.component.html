@@ -1,0 +1,42 @@
+<form>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                <h1>Ingresa tus datos</h1>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field>
+                <mat-label>Nombre del local</mat-label>
+                <input placeholder="Nombre de local" matInput type="text">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Número telefónico del jefe</mat-label>
+                <input placeholder="3128752940" matInput type="number">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Dirección</mat-label>
+                <input placeholder="Carrera 2 #8-21" matInput type="text">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Ciudad</mat-label>
+                <input placeholder="Ciudad del negocio" matInput type="text">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Contraseña</mat-label>
+                <input matInput type="password">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Confirmar contraseña</mat-label>
+                <input matInput type="password">
+            </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="basic">Registrarse</button>
+            <a mat-button color="link" routerLink="/">¿Ya tienes una cuenta?</a>
+        </mat-card-actions>
+        <div class="register">
+            <a mat-button color="primary" routerLink=".">Ver Términos y Condiciones</a>
+        </div>
+    </mat-card>
+</form>
