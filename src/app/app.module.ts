@@ -7,12 +7,14 @@ import { LoginComponent } from './login/login.component';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './register/register.component';
+import { RestauranteComponent } from './restaurante/restaurante.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    RestauranteComponent
   ],
   imports: [
     BrowserModule,
