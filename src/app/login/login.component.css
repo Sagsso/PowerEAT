@@ -51,9 +51,15 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 input[type=number] { -moz-appearance:textfield; }
-button {
-    color: white;
-    background-color: #ff3838;
+
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo > img {
+    width: 30%;
 }
 
 @media (min-width: 800px) {
@@ -61,7 +67,12 @@ button {
         align-items: center;
     }
     mat-card{
+        margin: 0px;
         width: 40%;
         height: 70%;
+    }
+
+    .logo > img {
+    width: 10%;
     }
 }

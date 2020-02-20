@@ -13,7 +13,7 @@ form {
 }
 mat-card {
     height: auto;
-    padding: 40px 0px;
+    padding: 15px 0px 40px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,11 +29,25 @@ mat-card-content, mat-card-actions, .register {
 }
 
 mat-card-header{
-    margin-bottom: 25px;
+    margin: 25px 0px;
 }
 
 mat-card-content {
     width: 65%;
+}
+ .edit-bar {
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     padding: 0px 10px;
+ }
+
+.switcher-container {
+    display: flex;
+}
+
+.estado {
+    margin-left: 10px;
 }
 
 h1 {
@@ -59,16 +73,13 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 input[type=number] { -moz-appearance:textfield; }
-button {
+/* button {
     color: white;
     background-color: #ff3838;
-}
+} */
 
 .btn-edit {
-    background-color: darkcyan;
-    position: absolute;
-    right: 5%;
-    top: 5%;
+    width: auto;
 }
 
 .toggle {

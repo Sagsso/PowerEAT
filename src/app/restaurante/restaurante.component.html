@@ -1,6 +1,11 @@
 <form>
     <mat-card>
-        <button class="btn-edit" mat-raised-button (click)="onEdit($event)" type="button">Editar</button>
+        <div class="edit-bar">
+            <button mat-raised-button color="primary" [(ngModel)]="mode" name="save" ngDefaultControl
+                (click)="onEdit($event)" [disabled]="isDisabled" type="button">Guardar</button>
+            <button mat-raised-button color="basic" [(ngModel)]="mode" name="modo" ngDefaultControl
+                (click)="onEdit($event)" [disabled]="!isDisabled" type="button">Editar</button>
+        </div>
         <mat-card-header>
             <mat-card-title>
                 <h2>La Ruta</h2>
@@ -15,10 +20,11 @@
             <mat-form-field>
                 <mat-label>Logo</mat-label>
                 <input placeholder="logo.png" matInput [disabled]="isDisabled" type="text">
+                <input placeholder="logo.png" [disabled]="isDisabled" type="file">
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Fondo</mat-label>
-                <input placeholder="Carrera 2 #8-21" matInput [disabled]="isDisabled" type="number">
+                <input placeholder="300000" matInput [disabled]="isDisabled" type="number">
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Dirección del restaurante</mat-label>
@@ -34,10 +40,13 @@
             </mat-form-field>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button color="primary">Abierto</button>
-            <mat-slide-toggle [color]="colorChecked">
-                {{estado}}
-            </mat-slide-toggle>
+            <div class="switcher-container">
+                <mat-slide-toggle [(ngModel)]="isOpen" color="primary" name="estado"></mat-slide-toggle>
+                <div class="estado">
+                    <div class="abierto" *ngIf="isOpen">Abierto</div>
+                    <div class="cerrado" *ngIf="!isOpen">Cerrado</div>
+                </div>
+            </div>
         </mat-card-actions>
 
     </mat-card>

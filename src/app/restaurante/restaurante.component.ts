@@ -1,6 +1,4 @@
-import { Component, OnInit, DoCheck } from '@angular/core';
-import { ThemePalette } from '@angular/material/core';
-
+import { Component, OnInit, DoCheck, Input, AfterContentChecked } from '@angular/core';
 @Component({
   selector: 'app-restaurante',
   templateUrl: './restaurante.component.html',
@@ -9,7 +7,9 @@ import { ThemePalette } from '@angular/material/core';
 export class RestauranteComponent implements OnInit {
 
   isDisabled: boolean = true;
-  colorCheck: ThemePalette = "primary";
+  isOpen: boolean = false;
+  mode: string = 'edit';
+
   constructor() { }
 
   ngOnInit() {
