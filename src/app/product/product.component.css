@@ -1,18 +1,42 @@
+*{
+    margin: 0px;
+}
+
 .container {
     height: 100px;
     width: 100%;
     padding: 15px 15px;
 }
 
+mat-card {
+    padding: 7px 10px;
+}
+
 mat-card-content {
     height: 100%;
     display: grid;
     grid-template-columns: auto 70px;
+    grid-template-rows: 50px;
     align-content: center;
+    margin:0px;
+}
+
+mat-card-title {
+    font-size: 14px;
+    margin: 0px;
 }
 
 mat-card-subtitle {
     margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.img_container {
+    display: flex;
+    justify-content: center;
 }
 
 .img_container > img {
@@ -22,6 +46,6 @@ mat-card-subtitle {
 
 .price {
     font-family: Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: bold;
 }

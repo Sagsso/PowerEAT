@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+form {
+    height: auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+mat-card {
+    height: auto;
+    padding: 15px 0px 40px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+mat-card-content, mat-card-actions, .register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+mat-card-header{
+    margin: 25px 0px;
+}
+
+mat-card-content {
+    width: 65%;
+}
+ .edit-bar {
+     width: 100%;
+     display: flex;
+     justify-content:center;
+ }
+
+ .edit-bar > button {
+     margin: 0px 10px;
+ }
+
+.switcher-container {
+    display: flex;
+}
+
+.estado {
+    margin-left: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    text-align: center;
+}
+
+
+p{
+    margin: 0;
+}
+
+input {width: 100%}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
+/* button {
+    color: white;
+    background-color: #ff3838;
+} */
+
+.btn-edit {
+    width: auto;
+}
+
+.toggle {
+    color: #61d4b3;
+    background-color: #61d4b3;
+}
+
+@media (min-width: 800px) {
+    form{
+        align-items: center;
+    }
+    mat-card{
+        width: 40%;
+        height: 90%;
+    }
+    mat-card-content {
+        width: 60%;
+    }
+}

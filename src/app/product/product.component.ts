@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { Product } from './product.model';
 
@@ -9,16 +9,13 @@ import { Product } from './product.model';
 })
 export class ProductComponent implements OnInit {
 
-  product: Product = {
-    name: 'Hamburguesa',
-    description: 'Hamburguesa doble carne, doble queso, doble todo, bien mela',
-    img: 'assets/burger.jpg',
-    price: 11500
-  }
+  @Input() product: Product;
+  @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }

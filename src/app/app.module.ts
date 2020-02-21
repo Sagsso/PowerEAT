@@ -3,14 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { LoginComponent } from './login/login.component';
 import { MaterialModule } from './material/material.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { RestauranteComponent } from './restaurante/restaurante.component';
 import { ProductComponent } from './product/product.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -18,14 +20,17 @@ import { ProductComponent } from './product/product.component';
     LoginComponent,
     RegisterComponent,
     RestauranteComponent,
-    ProductComponent
+    ProductComponent,
+    ProductEditComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

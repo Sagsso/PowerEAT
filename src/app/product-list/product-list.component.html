@@ -1,0 +1,8 @@
+<div class="product-grid">
+    <app-product class="product" *ngFor="let product of products" (productClicked)="clickProduct($event)"
+        [product]="product" (click)="clickProduct(products.indexOf(product))">
+    </app-product>
+</div>
+<div class="edit-bar">
+    <button mat-raised-button color="primary" (click)="newProduct()" type="button">Agregar producto</button>
+</div>

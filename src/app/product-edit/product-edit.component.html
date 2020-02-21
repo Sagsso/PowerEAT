@@ -1,0 +1,41 @@
+<form [formGroup]="form" action="">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                <h2 *ngIf="product">{{product.name}} </h2>
+                <h1>Datos del producto</h1>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field>
+                <mat-label>Nombre de producto</mat-label>
+                <input formControlName="name" placeholder="Nombre de local" matInput type="text">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Imagen del producto</mat-label>
+                <input formControlName="img" placeholder="" matInput type="text">
+                <!-- <input placeholder="logo.png"  type="file"> -->
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Descripción</mat-label>
+                <input formControlName="description" placeholder="" matInput type="text">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Precio</mat-label>
+                <input formControlName="price" placeholder="300000" matInput type="number">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Cantidades disponible</mat-label>
+                <input matInput type="number">
+            </mat-form-field>
+        </mat-card-content>
+    </mat-card>
+</form>
+
+<div class="edit-bar">
+    <button mat-raised-button color="primary" [(ngModel)]="mode" name="save" ngDefaultControl (click)="onEdit($event)"
+        type="button">Guardar</button>
+
+    <button mat-raised-button color="warn" name="delete" ngDefaultControl (click)="onEdit($event)"
+        type="button">Eliminar</button>
+</div>

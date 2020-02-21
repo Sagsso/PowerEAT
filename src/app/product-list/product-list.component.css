@@ -1,0 +1,26 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.product-grid {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    height: auto;
+    margin-bottom:50px;
+}
+
+.product {
+    margin-bottom: 4px;
+}
+ .edit-bar {
+     width: 100%;
+     display: flex;
+     justify-content:center;
+ }
+
+ .edit-bar > button {
+     margin: 0px 10px;
+ }
